@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FacebookClone</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">facebook clone</a>
+      </div>
+<% if user_signed_in? %>
+        <div id="navbar" class="navbar-collapse collapse" >
+          <form class="navbar-form navbar-nav" role="search">
+            <div class="form-group">
+              <div class="input-groupk" >
+                <label for="search" class="sr-only">Search:</label>
+                <input type="text" id="search" name="search" class="form-control" placeholder="Search">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default btn-search"><span class="glyphicon glyphicon-search"></span></button>
+          </form>
+          <ul id="icon-nav" class="nav navbar-nav navbar-right">
+            <li><a href="#" class="text">Current User</a></li>
+            <li><a href="#" class="icon"><span class="sprite-friends">1</span></a></li>
+            <li><a href="#" class="icon"><span class="sprite-messages"></span></a></li>
+            <li><a href="#" class="icon"><span class="sprite-notifications"></span></a></li>
+            <!--<li><a href="#"><span class="sprite-privacy"></span></a></li>-->
+            <li><a href="/sign_out/" class="text">Sign Out</a></li>
+          </ul>
+        </div>
+    <% else %>
+    <div id="navbar" class="navbar-collapse collapse">
+      <!--<%= form_for(resource, as: resource_name, :html => {:class => "navbar-form navbar-right"}, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <%= f.email_field :email, :class => "form-control", :placeholder =>"Email"%>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+          <p><a href="#" >Forgot account?</a></p>
+      <% end %>-->
+    </div><!--/.navbar-collapse -->
+
+<% end %>
+    </div>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

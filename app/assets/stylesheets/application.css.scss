@@ -1,0 +1,452 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+    font-size: small;
+    background-color: #edf0f5;
+}
+h2 span {
+    display: block;
+    margin-top: 10px;
+    font-size: .5em;
+    font-weight: normal;
+}
+.container {
+}
+header {
+    background-color: #44609D;
+}
+.navbar {
+    background-color: #44609D;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #133783;
+
+}
+.navbar-header a.navbar-brand, .navbar-header a.navbar-brand:hover, .navbar-header a.navbar-brand:visited {
+    /*margin-top: 10px;*/
+    font-size: 2.5em;
+    font-weight:bold;
+    color: #ffffff;
+}
+.navbar-form {
+    margin-bottom: 0;
+    padding-bottom: .2em;
+    /*background-color: #00FF00;*/
+}
+.navbar-form label {
+    color: #ffffff;
+    font-weight: normal;
+}
+.navbar-form input {
+    padding: 0 0 0 .5em;
+    border-radius: 0;
+}
+.navbar-form .btn {
+    /*margin: 2em 0 0 0;*/
+    color: #ffffff;
+    background-color: #4267B2;
+    border-color: #29487D;
+    border-radius: 0;
+}
+.navbar .btn:hover {
+    background-color: #365899;
+    border-color: #29487D;
+}
+.navbar-form .btn-search {
+    /*margin-top: -14px;*/
+    margin-left: -.25em;
+    color: #333333;
+    background-color: #eeeeee;
+    border-color: transparent;
+    border-radius: 0 5px 5px 0;
+}
+.navbar .btn-search:hover {
+    background-color: #e0e0e0;
+    border-color: transparent;
+}
+.navbar form p {
+    margin-left: 14.5em;
+    margin-bottom: 0;
+    padding: 0;
+    display: block;
+    color: #9cb4d8;
+}
+.navbar-header .navbar-toggle {
+    background-color: #4267B2;
+    border-color: #29487D;
+}
+.navbar-header .navbar-toggle:hover {
+    background-color: #365899;
+    border-color: #29487D;
+}
+.navbar-header .navbar-toggle span.icon-bar{
+    background-color: #29487D;
+}
+.navbar form a, .navbar form a:hover, .navbar form a:visited {
+    color: #9cb4d8;
+}
+#icon-nav span{
+    margin: 0;
+    padding: 0;
+    color: #990000;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: 0;
+}
+#icon-nav .text {
+  display: block;
+  margin-top: .8em;
+  padding: .3em .8em;
+  color: white;
+  font-weight: 600;
+}
+#icon-nav .text:hover {
+  background-color: #344f88;
+}
+#icon-nav .icon {
+  display: block;
+  margin: 0 .2em;
+}
+.sprite-friends {
+    display: block;
+    width: 24px;
+    height: 21px;
+    background-image: url('IMG_1629.png');
+    background-position: 0 467px;
+    background-color: transparent;
+}
+.sprite-messages {
+    display: block;
+    width: 24px;
+    height: 21px;
+    background-image: url('IMG_1629.png');
+    background-position: 0 318px;
+    background-color: transparent;
+}
+.sprite-notifications {
+    display: block;
+    width: 24px;
+    height: 21px;
+    background-image: url('IMG_1629.png');
+    background-position: 0 418px;
+    background-color: transparent;
+}
+.sprite-privacy {
+    display: block;
+    width: 24px;
+    height: 21px;
+    background-image: url('IMG_1629.png');
+    background-position: 22px 40px;
+    background-color: transparent;
+}
+/**********Signup Form**********/
+#new_user{
+    /*font-size: 1.5em;*/
+}
+.form-group {
+}
+.input-group {
+    margin-bottom: .5em;
+    width: 100%;
+}
+.input-group span.input-group-addon {
+    width: 10px;
+    background-color: transparent;
+    border: 0;
+}
+#new_user label {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+#new_user input {
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+#new_user input.text {
+    height: 2em;
+}
+#new_user #user_first_name {
+    margin-right: 1.6%;
+    width: 49.2%;
+}
+
+#new_user #user_last_name {
+    width: 49.2%;
+}
+
+#new_user .selectpicker {
+    margin-right: .5em;
+    padding: 0;
+    font-size: 1.5em;
+    /*border-color: #8b0300;*/
+    border-color: #c0c0c0;
+    border-radius: 0;
+}
+.radio label {
+    margin-right: .5em;
+}
+.input-group .radio-btn {
+    display: block;
+    margin-right: .2em;
+    width: 1em;
+    height: auto;
+}
+#new_user p {
+    font-size: .9em;
+}
+#new_user p a {
+  display: block;
+  margin: 1em 2em 2em 0;
+  font-size: 1.4em;
+}
+#new_user .btn {
+    margin: .5em 0 0 0;
+    padding: 0.3125em 3.125em;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #73b25e;
+    border-radius: 5px;
+}
+#signupleft {
+    margin: 3em 0 0 -1em;
+}
+#signupleft div {
+    margin: 3.5em 0 0 0;
+}
+#signupleft p.img {
+    margin: -1em auto 0 auto;
+    text-align: center;
+}
+#signupleft img {
+    /*display: block;
+    margin: 0 auto;*/
+}
+#signupleft p {
+    margin: 0 0 0 0;
+    font-size: 1.2em;
+}
+/*******Profile******/
+#coverphoto {
+    position: relative;
+    margin: -20px 0 0 0;
+    padding: 0;
+    max-height: 204px;
+    background-color: #000000;
+    /*overflow: hidden;*/
+}
+#coverphoto img {
+    margin: 0 0 5px 0;
+    padding: 0;
+    width: 100%;
+    max-height: 100%;
+    z-index: 0;
+}
+#profilephoto {
+    position: absolute;
+    /*margin-top: 45px;*/
+    bottom: 0;
+    margin-left: 1.5em;
+    padding: 0;
+    width: 162px;
+    height: 159px;
+    border: 4px solid #FFFFFF;
+    overflow: hidden;
+}
+#profilephoto img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#displayname {
+    position: absolute;
+    bottom: 0;
+    margin-top: 4.6em;
+    margin-left: 190px;
+    font-size: 2.5em;
+    color: #ffffff;
+    z-index: 2;
+}
+a.friend {
+    position: absolute;
+    right: 2em;
+    bottom: 1.5em;
+    display: block;
+    padding-top: .2em;
+    padding-right: 1.2em;
+    padding-bottom: .05em;
+    padding-left: .4em;
+    color: #000000;
+    white-space: nowrap;
+    background-color: #eeeeee;
+    border: 1px solid #000000;
+    z-index: 10;
+}
+a.friend:hover {
+    text-decoration: none;
+    background-color: #e0e0e0;
+}
+ a.friend span.icon {
+     display: block;
+     margin-right: .1em;
+     width: 16px;
+     height: 16px;
+     background-image: url('IMG_1629.png');
+     background-position: -18px -520px;
+     background-repeat: no-repeat;
+     background-size: 35px 717px;
+     /*background-color: #133783;*/
+ }
+#leftcol {
+    margin: 1em 0 0 0;
+    padding: 0 .5em 0 0;
+}
+#rightcol {
+    margin: 1em 0 0 0;
+    padding: 0 0 0 .5em;
+}
+.component-left {
+    float: left;
+    margin: 0 0 1em 0;
+    padding: 0;
+    width: 100%;
+    background: #ffffff;
+}
+.component-left h4{
+    margin: 0;
+    padding: .5em;
+    width: 100%;
+    font-weight: normal;
+}
+.component-left h4 span.friendsheader {
+    display: block;
+    margin: 0 5px 0 0;
+    width: 24px;
+    height: 24px;
+    background-position: -344px -370px;
+    background-position: -164px -175px;
+    background-image: url('g9qZ32Kc_Dy.png');
+    border-radius: 0;
+    background-size: 312px 220px;
+}
+.component-left table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+.component-left table tr {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+.component-left table td {
+    width: 33%;
+    height: 100px;
+    max-height: 100px;
+    color: #ffffff;
+    text-align: center;
+    background-image: url('friendthumbbg.png');
+    background-position: bottom center;
+    border: solid #ffffff;
+}
+.component-left table td .wrapper {
+    position: relative;
+}
+.component-left table td img {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100px;
+    z-index: 1;
+}
+.component-left table td span {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    z-index: 51;
+}
+.component-right {
+    float: right;
+    margin: 0 0 1em 0;
+    padding: 0;
+    width: 100%;
+    background: #ffffff;
+}
+.component-right h4 {
+    margin: 0;
+    padding: 10px;
+    font-weight: normal;
+}
+
+.component-right form input {
+    /*margin-bottom: 1em;*/
+    margin: 0 2%;
+    padding: 1%;
+    padding-right: 0;
+    width: 96%;
+    border: .1em solid #c0c0c0;
+}
+.component-right form input[type=file] {
+    margin: 0 2%;
+    padding: 2% 0;
+    width: 96%;
+    border: 0;
+}
+
+.component-right form textarea {
+    /*margin-bottom: .5em;*/
+    margin: 0 2%;
+    padding: 1%;
+    width: 96%;
+    height: 4em;
+    border: 0;
+    border: .1em solid #c0c0c0;
+}
+.component-right .btn {
+    margin:  0 2% 2% 0;
+    padding: .1em .5em;
+    color: #ffffff;
+    background-color: #4267B2;
+    border-color: #29487D;
+    border-radius: 5px;
+}
+.component-right .navbar .btn:hover {
+    background-color: #365899;
+    border-color: #29487D;
+}
+.postby {
+    margin:.5em .1em .1em .5em;
+
+}
+.postby a {
+    color: #44609D;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.postdatetime {
+    margin: .1em .1em .1em .5em;
+
+}
+.postmessage {
+    margin: .5em;
+
+}
