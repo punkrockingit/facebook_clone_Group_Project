@@ -29,15 +29,14 @@
       <div class="input-group ">
         <%= f.date_select "birthday", {:order => [:month, :day, :year], :start_year => 1920, :prompt => {:month =>"Month", :day => "Day", :year => "Year"}}, {:class => "selectpicker"}  %>
       </div>
-      <label for="lastname" class="sr-only">Gender:</label>
+      <label class="sr-only">Gender:</label>
       <div class="input-group  radio" >
-        <label for="female" class="radio-inline">
-          <input type="radio" name="gender" value="emale" id="female" class="form-control radio-btn">
-          <%= f.radio_button :gender, "female"  %>
+        <label for="user_gender_female" class="radio-inline">
+          <%= f.radio_button :gender, 'female',  :class => 'form-control radio-btn' %>
           &nbsp;Female
         </label>
-        <label for="male" class="radio-inline">
-          <input type="radio" name="gender" value="male" id="male" class="form-control radio-btn">&nbsp;Male
+        <label for="user_gender_male" class="radio-inline">
+          <%= f.radio_button :gender, 'male',  :class => 'form-control full-size radio-btn' %>&nbsp;Male
         </label>
       </div>
       <p>By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>

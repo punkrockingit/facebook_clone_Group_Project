@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_confirmation_of :email, :message => " should match confirmation"
+  validates_confirmation_of :email, :message => ' should match confirmation '
 end
