@@ -11,4 +11,7 @@ class ApplicationController < ActionController::Base
     '/sign_in/'
   end
 
+  def after_sign_in_path_for(resource_or_scope)
+    "/profile/#{params[:id]}"
+  end
 end

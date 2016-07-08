@@ -160,6 +160,11 @@ header {
 #new_user{
     /*font-size: 1.5em;*/
 }
+#flash_alert, #flash_notice {
+  color: #990000;
+  font-weight: bold;
+}
+
 .form-group {
 }
 .input-group {
@@ -449,4 +454,14 @@ a.friend:hover {
 .postmessage {
     margin: .5em;
 
+}
+
+/****Profile Edit *********/
+input.input_left{
+  margin-right: 1.6%;
+  width: 49.2%;
+}
+
+input.input_right{
+  width: 49.2%;
 }

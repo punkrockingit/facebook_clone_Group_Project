@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get '/sign_in' => 'devise/sessions#new'
     get '/sign_up' => 'registrations#new'
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,6 +19,15 @@ Rails.application.routes.draw do
 
   get '/profile/:id' => 'profile#index'
   get '/profile/' => 'profile#index'
+  get '/profile' => 'profile#index'
+  get '/profile/:id/edit/' => 'profile#edit'
+  get '/profile/:id/edit' => 'profile#edit'
+  post '/profile/update/:id/' => 'profile#update'
+  post '/profile/update/:id' => 'profile#update'
+  patch '/profile/update/:id/' => 'profile#update'
+  patch '/profile/update/:id' => 'profile#update'
+
+  resources :users
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
