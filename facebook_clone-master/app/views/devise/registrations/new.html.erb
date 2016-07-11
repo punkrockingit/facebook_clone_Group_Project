@@ -1,0 +1,64 @@
+<div class="container">
+  <%= form_for(resource, as: resource_name, :html => {:class => "col-md-5 pull-right"}, url: registration_path(resource_name)) do |f| %>
+    <h2>
+      Sign Up
+      <span>It's free and always will be</span>
+    </h2>
+      <%= devise_error_messages! %>
+    <div class="form-group">
+      <label for="first_name" class="sr-only">First Name:</label>
+      <label for="last_name" class="sr-only">Last Name:</label>
+      <div class="input-group ">
+        <%= f.text_field :first_name, :class => "form-control pull-left text", :placeholder =>'First Name', :required => true %>
+        <%= f.text_field :last_name, :class => "form-control pull-left text", :placeholder =>"Last Name", :required => true %>
+      </div>
+      <%= f.label :email, :class => "sr-only"%>
+      <div class="input-group" >
+        <%= f.email_field :email, :class => "form-control text", :placeholder =>"Email", :required => true%>
+      </div>
+      <label for="email_confirmation" class="sr-only">Email Confirm:</label>
+      <div class="input-group" >
+        <!--<input type="text" id="emailconfirm" class="form-control text" placeholder="Re-enter Email">-->
+        <%= f.email_field :email_confirmation, :class => "form-control text", :placeholder =>"Re-enter Email", :required => true%>
+      </div>
+      <label for="password" class="sr-only">Password:</label>
+      <%= f.label :password, :class => "sr-only" %>
+      <div class="input-group" >
+        <%= f.password_field :password, autocomplete: "off", :class => "form-control full-size text", :placeholder => "Password (6 characters minimum)", :required => true %>
+      </div>
+      <label for="month">Birthday</label>
+      <div class="input-group ">
+        <%= f.date_select "birthday", {:order => [:month, :day, :year], :start_year => 1920, :prompt => {:month =>"Month", :day => "Day", :year => "Year"}}, :required => true, :class => "selectpicker"  %>
+      </div>
+      <label class="sr-only">Gender:</label>
+      <div class="input-group  radio" >
+        <label for="user_gender_female" class="radio-inline">
+          <%= f.radio_button :gender, 'female',  :class => 'form-control radio-btn', :required => true %>
+          &nbsp;Female
+        </label>
+        <label for="user_gender_male" class="radio-inline">
+          <%= f.radio_button :gender, 'male',  :class => 'form-control full-size radio-btn', :required => true %>&nbsp;Male
+        </label>
+      </div>
+      <p>By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+      <%= f.submit 'Sign Up', :class => 'btn'%>
+      <p class="clearfix"><a href="/sign_in/" class="pull-left">Sign In</a></p>
+    </div>
+  <% end %> <!--End form-->
+
+  <div id="signupleft" class="col-md-7 pull-left">
+    <h2>Connect with friends and the world around you on Facebook.</h2>
+    <div class="row">
+      <p class="img col-md-2" ><img src="/assets/851565_602269956474188_918638970_n.png"/></p>
+      <p class="col-lg-9 col-md-offset-1" ><strong>See photos and updates</strong> from friends in News Feed.</p>
+    </div>
+    <div class="row">
+      <p class="img col-md-2" ><img src="/assets/851585_216271631855613_2121533625_n.png" /></p>
+      <p class="col-lg-9 col-md-offset-1" ><strong>Share what's new</strong> in your life on your Timeline.</p>
+    </div>
+    <div class="row">
+      <p class="img col-md-2" ><img src="/assets/851558_160351450817973_1678868765_n.png" /></p>
+      <p class="col-lg-9 col-md-offset-1" ><strong>Find more</strong> of what you're looking for with Facebook Search.</p>
+    </div>
+  </div>
+</div>

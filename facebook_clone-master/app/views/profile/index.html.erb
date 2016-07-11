@@ -1,0 +1,137 @@
+<%# @users.each do |user|%>
+    <% #username = user.first_name.to_s + ' ' + user.last_name.to_s%>
+    <%# works = user.works_for%>
+    <% #lives = user.lives_in_city.to_s + ', ' + user.lives_in_state.to_s %>
+    <% #from = user.from_city.to_s + ', ' + user.from_state.to_s %>
+<%#end%>
+<div class="container">
+  <div class="row">
+    <% @users.each do |user|%>
+    <div id="coverphoto" class="col-md-9 col-sm-9 col-xs-9 pull-left row">
+      <img src="/assets/DSC_0005.jpg" class="bg-photo"/>
+      <div id="profilephoto" class="pull-left">
+        <img src="/assets/SLCPunk.jpg" />
+      </div>
+      <p id="displayname" class="pull-left">
+
+        <%= user.first_name.to_s + ' ' + user.last_name.to_s%>
+      </p>
+      <a href="#" class="friend clearfix"><span class="icon pull-left"></span>Add Friend &nbsp;</a>
+    </div>
+  <%end%>
+  </div>
+  <div class="row">
+
+    <div id="leftcol" class="col-md-3 col-xs-9 clearfix">
+      <div class="component-left">
+        <% @users.each do |user|%>
+        <h4>Intro <span><a href="<%= user.id %>/edit/" class="pull-right">Edit</a></span></h4>
+        <% end %>
+        <ul>
+          <% @users.each do |user|%>
+          <li>Works at <%= user.works_for.to_s%></li>
+          <li>Lives in <%= user.lives_in_city.to_s + ', ' + user.lives_in_state.to_s%></li>
+          <li>From <%= user.from_city.to_s + ', ' + user.from_state.to_s %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="component-left">
+        <h4><span class="friendsheader pull-left"></span>Friends</h4>
+        <table>
+          <tr>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+            <td valign="bottom">
+              <div class="wrapper">
+                <span>Stevo</span>
+                <img src="/assets/SLCPunk.jpg" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="rightcol" class=" col-md-6 col-xs-9 clearfix">
+      <div class="component-right">
+        <form action="#" method="post">
+          <h4>Post to Wall</h4>
+          <textarea placeholder="Message"></textarea>
+          <input type="text" name="Link" placeholder="Link"/>
+          <input type="file" name="photo" />
+          <button type="submit" class="btn pull-right">Post</button>
+        </form>
+      </div>
+      <div class="component-right">
+        <div class="postby"><a href="">Matthew Lillard</a></div>
+        <div class="postdatetime">June 18 at 5:40PM</div>
+        <p class="postmessage">
+          A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+        </p>
+      </div>
+      <div class="component-right">
+        <div class="postby"><a href="">Matthew Lillard</a></div>
+        <div class="postdatetime">June 18 at 5:40PM</div>
+        <p class="postmessage">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+      </div>
+      <div class="component-right">
+        <div class="postby"><a href="">Matthew Lillard</a></div>
+        <div class="postdatetime">June 18 at 5:40PM</div>
+        <p class="postmessage">
+          The quick, brown fox jumps over a lazy dog.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
